@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/beans/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+        <!--  通道导入的方式复用  -->
+        <import resource="dependency-lookup-context.xml"></import>
+        <!--   依赖注入
+           autowire="byType" 通过类型的方式来注入依赖
+           -->
+        <bean id="userRepository" class="com.kevin.thinking.in.spring.ioc.overview.repository.UserRepository" autowire="byType"></bean>
+                <!--  手动配置（通过硬编码的方式注入）  -->
+                <!--<property name="users">
+                        <util:list>
+                                <ref bean="user"></ref>
+                                <ref bean="superUser"></ref>
+                        </util:list>
+                </property>-->
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/beans/spring-context.xsd">
+
+        <bean name="user" class="com.kevin.thinking.in.spring.ioc.overview.domian.User">
+            <property name="id" value="1"></property>
+            <property name="name" value="kevin"></property>
+        </bean>
+        <!-- 集合对象
+        <bean name="user2" class="com.kevin.thinking.in.spring.ioc.overview.domian.User">
+            <property name="id" value="2"></property>
+            <property name="name" value="kevin2"></property>
+        </bean>-->
+
+    <bean id="superUser" class="com.kevin.thinking.in.spring.ioc.overview.domian.SuperUser" parent="user" primary="true">
+        <property name="addr" value="苏州园区"></property>
+    </bean>
+
+    <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+        <property name="targetBeanName" value="user"></property>
+    </bean>
+</beans>
