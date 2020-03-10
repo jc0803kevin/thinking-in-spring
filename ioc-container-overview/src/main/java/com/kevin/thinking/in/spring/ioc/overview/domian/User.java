@@ -27,6 +27,14 @@ public class User {
         this.name = name;
     }
 
+
+    public static User createUser(){
+        User kevin = new User();
+        kevin.setId(100L);
+        kevin.setName("kevin-100");
+        return  kevin;
+    }
+
     @Override
     public String toString() {
         return "User{" +

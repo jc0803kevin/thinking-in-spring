@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.kevin</groupId>
         <artifactId>thinking-in-spring</artifactId>
@@ -11,7 +10,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>ioc-container-overview</artifactId>
+    <artifactId>spring-bean</artifactId>
+    <description>Spring Bean 基础 </description>
+
     <dependencies>
         <!-- Spring IoC 核心依赖 -->
         <dependency>
@@ -19,7 +20,11 @@
             <artifactId>spring-context</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>${groupId}</groupId>
+            <artifactId>ioc-container-overview</artifactId>
+            <version>${version}</version>
+        </dependency>
     </dependencies>
-
 
 </project>

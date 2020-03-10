@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/beans/spring-context.xsd">
+
+    <!-- 第三方依赖 -->
+    <import resource="classpath:/META-INF/dependency-lookup-context.xml"></import>
+    <!-- 给 "user" Bean取别名 "kevin-user" -->
+    <alias name="user" alias="kevin-user"></alias>
+</beans>
