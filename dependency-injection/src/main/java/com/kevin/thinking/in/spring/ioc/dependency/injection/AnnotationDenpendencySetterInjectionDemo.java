@@ -43,7 +43,12 @@ public class AnnotationDenpendencySetterInjectionDemo {
         return beanDefinitionBuilder.getBeanDefinition();
     }
 
-
+    /**
+     * @Author kevin
+     * @Description 基于注解构建
+     * @Date Created on 2020/3/31 16:25
+     * @return
+     */
 //    @Bean
 //    public UserHolder userHolder(User user){
 //        return new UserHolder(user);
