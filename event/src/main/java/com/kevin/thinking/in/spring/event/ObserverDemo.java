@@ -15,9 +15,10 @@ public class ObserverDemo {
 
     public static void main(String[] args) {
         EventObservable eventObservable = new EventObservable();
-        //观察者 （监听）
+        //添加观察者 （监听）
         eventObservable.addObserver(new EventObserver());
-        //发布事件
+        eventObservable.addObserver(new KevinObserver());
+        //发布事件（消息）
         eventObservable.notifyObservers("Hello , kevin");
     }
 
@@ -45,7 +46,14 @@ public class ObserverDemo {
 
         public void update(Observable o, Object event) {
             EventObject eventObject = (EventObject) event;
-            System.out.println("接收到事件->"+eventObject);
+            System.out.println("EventObserver 接收到事件->"+eventObject);
+        }
+    }
+    static class KevinObserver implements Observer, EventListener{
+
+        public void update(Observable o, Object event) {
+            EventObject eventObject = (EventObject) event;
+            System.out.println("KevinObserver 接收到事件->"+eventObject);
         }
     }
 }
