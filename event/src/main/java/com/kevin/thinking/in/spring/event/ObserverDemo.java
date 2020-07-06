@@ -16,8 +16,8 @@ public class ObserverDemo {
     public static void main(String[] args) {
         EventObservable eventObservable = new EventObservable();
         //添加观察者 （监听）
-        eventObservable.addObserver(new EventObserver());
         eventObservable.addObserver(new KevinObserver());
+        eventObservable.addObserver(new EventObserver());
         //发布事件（消息）
         eventObservable.notifyObservers("Hello , kevin");
     }
